@@ -1,22 +1,22 @@
 # remarkableslides
-Build Markdown files into slides using remark.js.
-
-<img src="https://github.com/anderslatif/KeysKey/blob/main/KeysKeyLogo.png" alt="logo" width="200"/>
-
-# KeysKey
 
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
 
+Build Markdown files into slides using remark.js.
+
+<img src="https://github.com/anderslatif/remarkableslides/blob/main/remarkableslides_logo.png" alt="remarkableslides logo" width="200"/>
 
 
 A CLI tool that automates the process of building and serving [remark.js](https://github.com/remarkjs/remark) slide presentations from markdown files. 
 
-Additional features:
+## Features:
 
-* can watch for changes in markdown and rebuild only what is needed
-* markdown linting
-* spellchecking
+* Build markdown files into a HTML document for presentation
+* Create a server that serves the presentations
+* Can watch for changes in markdown and rebuild only what is needed
+* Markdown linting
+* Spellchecking
 
 ## How to run
 
@@ -40,22 +40,31 @@ $ remarkableslides
 
 ## Flags
 
-All flags are optional. 
+All flags are optional. The default behavior is that it compiles markdown files into presentations. Markdown linting and spell checks are disabled by default. The server that runs the presentations are also disabled by default. 
 
-<!-- todo create a markdown table -->
-Linting
---linting-disable  linting is enabled by default. this disables it.
-CheckSpelling
---spell-check   enables spell checking on the markdown files
---spell-check-language="lang" allows you to define a language  
-<!-- todo link to the languages available and what to type exactly -->
 
-Rebuilding on file changes
---listen  listens to changes in `.md` files and efficiently updates only the file that was changed
+**Modes**
 
-Server
---live  deploys a server on port 1234
---live-port=XXXX specifies the port for the server 
+| Flags    | Description                                                           |
+|-----------|-----------------------------------------------------------------------|
+| `--listen`| Listens to changes in `.md` files and only rebuilds the file that was changed. |
+| `--live`  | Deploys a server on port 1234.                                        |
+
+**Server options**
+
+| Flags             | Description                          |
+|--------------------|--------------------------------------|
+| `--live-port=XXXX` | Specifies the port for the server.   |
+
+**Linting and spelling options**
+
+| Option                         | Description                                            |
+|--------------------------------|--------------------------------------------------------|
+| `--linting-disable`            | Linting is enabled by default. This disables it.       |
+| `--spell-check`                | Enables spell checking on the markdown files.          |
+| `--spell-check-language="lang"`| Allows you to define a language for spell checking.    |
+
+
 
 
 # Server
@@ -93,13 +102,13 @@ Some text.
 
 `---` is used to denote the next slide. 
 
-<div style="font-weight: bold; font-size: 20px; text-shadow: 2px 2px 4px #aaa; background: -webkit-linear-gradient(#e66465, #9198e5); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+<div style="color: cyan; font-size: 20px; text-shadow: 2px 2px 4px #aaa;">
   You can also embed HTML into your markdown
 </div>
 
 ```
 
-2. Now run the `remarkableslides` command in the directory and notice how it created `presentation.html`. 
+2. Now run the `remarkableslides` command in the directory and notice how it creates `presentation.html`. 
 
 3. Try to run the server in watch mode:
 
@@ -128,4 +137,12 @@ Blacklisted folders: `node_modules`.
 Blacklisted files: `README.md`.
 
 
+## Issues
 
+Feel free to create an [issue](https://github.com/anderslatif/remarkableslides/issues). 
+
+
+[npm-version-image]: https://img.shields.io/npm/v/remarkableslides.svg
+[npm-url]: https://www.npmjs.com/package/remarkableslides
+[npm-install-size-image]: https://packagephobia.com/badge?p=remarkableslides
+[npm-install-size-url]: https://packagephobia.com/result?p=remarkableslides

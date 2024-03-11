@@ -1,9 +1,11 @@
 {
   "name": "remarkableslides",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Build Markdown files into slides using remark.js",
   "type": "module",
-  "main": "index.js",
+  "bin": {
+    "remarkableslides": "./lib/cli.js"
+  },
   "directories": {
     "lib": "lib"
   },
