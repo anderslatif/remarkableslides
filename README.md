@@ -57,19 +57,19 @@ All flags are optional. The default behavior is that it compiles markdown files 
 |--------------------------------|---------------------------------------|
 | `--live-port <port_number>`    | Specifies the port for the server.    |
 
-**Linting and spelling options**
+**Other Options**
 
 | Option                                  | Description                                                             |
 |-----------------------------------------|-------------------------------------------------------------------------|
 | `--lint`                                | Lints the markdown files.                                               |
-| `--spell-check`                         | Enables spell checking on the markdown files. Default language is `en`. |
-| `--spell-check-language <language>`     | Allows you to define a language for spell checking.                     |
+| `--spell-check`                         | Enables spell checking on the markdown files. Only supports English.    |
+| `--add-table-of-contents`               | A table of contents will be inserted as the first slide.                |
 
 
 
 # Server
 
-Running the tool with the `--live` flag will create a HTTP server on port `1234`, that serves all the created presentation files. 
+By default, a server starts on port 1234 and serves all created presentation files.
 
 Endpoint names are derived from markdown file names. For directories containing multiple markdown files, endpoint names are combinations of those file names. If uniqueness is not achieved, folder names are incorporated into the endpoint name to ensure it is unique.
 
@@ -78,7 +78,7 @@ To get an overview of endpints just visit `localhost:1234/`.
 Use the `--live-port` flag to specify a different port. 
 
 
-## Create your first slide presentation
+## Try it out: Create your first slide presentation
 
 1. Create an md file of any name and add the following content to it:
 
