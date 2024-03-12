@@ -1,8 +1,5 @@
 {
-    
+    "quiet": true,
     "watch": ["./", "../../02._Slides"],
-    "ext": "js, md",
-    "events": {
-        "restart": "./onRestart.js ${files}"
-    }
+    "ext": "js, md"
 }
