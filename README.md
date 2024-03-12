@@ -5,7 +5,7 @@
 
 Build Markdown files into slides using remark.js.
 
-<img src="https://github.com/anderslatif/remarkableslides/blob/main/remarkableslides_logo.png" alt="remarkableslides logo" width="200"/>
+<img src="https://github.com/anderslatif/remarkableslides/blob/main/remarkableslides_logo.png" alt="remarkableslides logo" width="150"/>
 
 
 A CLI tool that automates the process of building and serving [remark.js](https://github.com/remarkjs/remark) slide presentations from markdown files. 
@@ -45,25 +45,25 @@ All flags are optional. The default behavior is that it compiles markdown files 
 
 **Modes**
 
-| Flags    | Description                                                           |
-|-----------|-----------------------------------------------------------------------|
-| `--listen`| Listens to changes in `.md` files and only rebuilds the file that was changed. |
-| `--live`  | Deploys a server on port 1234.                                        |
+| Flags          | Description                                                                                               |
+|----------------|-----------------------------------------------------------------------------------------------------------|
+| `--check-only` | Skips presentation creation. Ideal for spell checking or linting only.                                    |
+| `--no-listen`  | Disables file monitoring. Automatically activated with `--check-only`.                                    |
+| `--no-live`    | Prevents server deployment for presentations. Automatically enabled with `--check-only`.                  |
 
 **Server options**
 
-| Flags             | Description                          |
-|--------------------|--------------------------------------|
-| `--live-port=XXXX` | Specifies the port for the server.   |
+| Flags                          | Description                           |
+|--------------------------------|---------------------------------------|
+| `--live-port <port_number>`    | Specifies the port for the server.    |
 
 **Linting and spelling options**
 
-| Option                         | Description                                            |
-|--------------------------------|--------------------------------------------------------|
-| `--linting-disable`            | Linting is enabled by default. This disables it.       |
-| `--spell-check`                | Enables spell checking on the markdown files.          |
-| `--spell-check-language="lang"`| Allows you to define a language for spell checking.    |
-
+| Option                                  | Description                                                             |
+|-----------------------------------------|-------------------------------------------------------------------------|
+| `--lint`                                | Lints the markdown files.                                               |
+| `--spell-check`                         | Enables spell checking on the markdown files. Default language is `en`. |
+| `--spell-check-language <language>`     | Allows you to define a language for spell checking.                     |
 
 
 
@@ -71,14 +71,11 @@ All flags are optional. The default behavior is that it compiles markdown files 
 
 Running the tool with the `--live` flag will create a HTTP server on port `1234`, that serves all the created presentation files. 
 
-The endpoints are named after the markdown file names. If isn't unique then the endpoint will include folder names until it is.
+Endpoint names are derived from markdown file names. For directories containing multiple markdown files, endpoint names are combinations of those file names. If uniqueness is not achieved, folder names are incorporated into the endpoint name to ensure it is unique.
 
 To get an overview of endpints just visit `localhost:1234/`.
 
-
 Use the `--live-port` flag to specify a different port. 
-
-<!-- todo deal with endpoints by either prepending with an UUID for conflicting files or take more of the file path. -->
 
 
 ## Create your first slide presentation
@@ -121,7 +118,7 @@ And checkout `localhost:1234`. That's all!
 
 ### CSS styles for the presentation
 
-if you create a CSS file titled `presentation.css` in the same place as your markdown files, then the html file will point to it. 
+Create a CSS file titled `presentation.css` in the same place as your markdown file(s) to include a custom style, otherwise it will get a default template. 
 
 I have added some styles that make sense for me. You can always modify them directly in the `presentation.html` file. 
 
@@ -130,11 +127,11 @@ I have added some styles that make sense for me. You can always modify them dire
 
 All prsentations are named `presentation.html`. This helps when wanting to add them to a `.gitignore`.
 
-If there are multiple markdown files in a directory it will read them by alphabetic order and assemble them into a single presentation.
+If there are multiple markdown files in a directory, they will read them by alphabetic order and assembled into a single presentation.
 
-Blacklisted folders: `node_modules`. 
+Ignored folders: `node_modules`. 
 
-Blacklisted files: `README.md`.
+Ignored files: `README.md`.
 
 
 ## Issues
