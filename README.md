@@ -3,10 +3,11 @@
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
 
-Build Markdown files into slides using remark.js.
+> Build Markdown files into slides using remark.js.
 
 <img src="https://github.com/anderslatif/remarkableslides/blob/main/remarkableslides_logo.png" alt="remarkableslides logo" width="150"/>
 
+https://www.npmjs.com/package/remarkableslides
 
 A CLI tool that automates the process of building and serving [remark.js](https://github.com/remarkjs/remark) slide presentations from markdown files. 
 
