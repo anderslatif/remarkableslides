@@ -129,6 +129,8 @@ I have added some styles that make sense for me. You can always modify them dire
 
 All prsentations are named `presentation.html`. This helps when wanting to add them to a `.gitignore`.
 
+When serving a presentation the folder and its subfolders are served as static content. That allows images to be served with the presentation. 
+
 If there are multiple markdown files in a directory, they will read them by alphabetic order and assembled into a single presentation.
 
 Ignored folders: `node_modules`. 
