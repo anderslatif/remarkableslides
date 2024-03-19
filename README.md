@@ -46,11 +46,11 @@ All flags are optional. The default behavior is that it compiles markdown files 
 
 **Modes**
 
-| Flags          | Description                                                                                               |
-|----------------|-----------------------------------------------------------------------------------------------------------|
-| `--check-only` | Skips presentation creation. Ideal for spell checking or linting only.                                    |
-| `--no-listen`  | Disables file monitoring. Automatically activated with `--check-only`.                                    |
-| `--no-live`    | Prevents server deployment for presentations. Automatically enabled with `--check-only`.                  |
+| Flags          | Description                                                                                                   |
+|----------------|---------------------------------------------------------------------------------------------------------------|
+| `--check-mode` | Default: False. Skips presentation creation. Ideal for spell checking or linting only.                        |
+| `--listen-mode`| Default: True. Enables file monitoring without starting a server. Automatically deactivated with --check-mode.|
+| `--live-mode`  | Default: True. Enables server deployment for presentations. Automatically deactivated with --check-mode.      |
 
 **Server options**
 
