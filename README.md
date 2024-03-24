@@ -66,6 +66,7 @@ All flags are optional. The default behavior is that it compiles markdown files 
 | `--spell-check`                         | Enables spell checking on the markdown files. Only supports English.    |
 | `--add-table-of-contents`               | A table of contents will be inserted as the first slide.                |
 | `--correct-markdown-list-numbering`     | Makes sure that numbers are in chronological order. Also works for nested lists. |
+| `--convert-to-pdf`                      | Output a pdf (will not have any formatting).                            |
 
 
 
