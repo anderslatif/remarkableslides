@@ -17,7 +17,7 @@ A CLI tool that automates the process of building and serving [remark.js](https:
 * Create a server that serves the presentations
 * Can watch for changes in markdown and rebuild only what is needed
 * Markdown linting
-* Spellchecking
+* Spell-checking
 
 ## How to run
 
@@ -86,7 +86,6 @@ Use the `--live-port` flag to specify a different port.
 1. Create an md file of any name and add the following content to it:
 
 ```md
-
 # Slide Title
 
 Some text.
@@ -105,6 +104,32 @@ Some text.
 <div style="color: cyan; font-size: 20px; text-shadow: 2px 2px 4px #aaa;">
   You can also embed HTML into your markdown
 </div>
+
+---
+
+# Image slide
+
+<img src="./remarkableslides_logo" alt="Remarkable Slides Logo"/>
+
+<!-- The above will also work in markdown on Github -->
+---
+
+# Pros and cons lists
+
+* (+) Pro 1
+* (+) Pro 2
+* (-) Con 1
+* (-) Con 2
+* (!) Note!
+
+<!-- The above will still render in markdown but in the HTML presentation 
+'* (+/-/!)' becomes a bulleted list with the sign in paranthesis as the bullet point.
+Basically the above will render as:
+
+<ul style="list-style-type: '+ '"><li>Pro 1</li><li>Pro 2</li></ul>
+<ul style="list-style-type: '- '"><li>Con 1</li><li>Con 2</li></ul>
+<ul style="list-style-type: '! '"><li>Note!</li></ul>
+ -->
 
 ```
 
