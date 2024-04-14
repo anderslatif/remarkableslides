@@ -58,6 +58,7 @@ All flags are optional. The default behavior is that it compiles markdown files 
 |--------------------------------|---------------------------------------|
 | `--live-port=<port_number>`    | Specify the desired port for the server.  |
 
+
 **Output Options**
 
 | Flag                                    | Description                                                             |
@@ -77,6 +78,11 @@ Use <div class='ignore-presentation'>...</div> to exclude the enclosed content f
 | `--spell-check`                         | Enables spell checking on the markdown files. Only supports English.    |
 | `--add-table-of-contents`               | A table of contents will be inserted as the first slide.                |
 | `--correct-markdown-list-numbering`     | Makes sure that numbers are in chronological order. Also works for nested lists. |
+
+
+## Additional Info
+
+If a CSS file titled `presentation.css` is present in the directory, it will be automatically included in the presentation.
 
 
 # Server
