@@ -150,10 +150,10 @@ Basically the above will render as:
 
 2. Now run the `remarkableslides` command in the directory and notice how it creates `presentation.html`. 
 
-3. Try to run the server in watch mode:
+3. Try to run the server (it will watch for changes, rebuild and reload the page automatically):
 
 ```bash
-$ remarkableslides --live --watch
+$ remarkableslides
 ```
 
 And checkout `localhost:1234`. That's all!
