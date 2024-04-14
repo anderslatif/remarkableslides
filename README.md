@@ -3,7 +3,7 @@
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
 
-> Build Markdown files into slides using remark.js.
+> Make slides from markdown files using [remark.js](https://github.com/remarkjs/remark).
 
 <img src="https://github.com/anderslatif/remarkableslides/blob/main/remarkableslides_logo.png" alt="remarkableslides logo" width="150"/>
 
@@ -54,20 +54,29 @@ All flags are optional. The default behavior is that it compiles markdown files 
 
 **Server options**
 
-| Flags                          | Description                           |
+| Flag                           | Description                           |
 |--------------------------------|---------------------------------------|
-| `--live-port <port_number>`    | Specifies the port for the server.    |
+| `--live-port=<port_number>`    | Specify the desired port for the server.  |
+
+**Output Options**
+
+| Flag                                    | Description                                                             |
+|-----------------------------------------|-------------------------------------------------------------------------|
+| `--output-md`                           | `Output to a single md file titled 'presentation.md'.                   |
+| `--convert-to-pdf`                      | Output a pdf (will not have any formatting).                            |
+
+Use <div class='ignore-output-md'>...</div> to exclude the enclosed content from the markdown output. This content, however, will still be visible in the presentation.
+
+Use <div class='ignore-presentation'>...</div> to exclude the enclosed content from the presentation. 
 
 **Other Options**
 
-| Option                                  | Description                                                             |
+| Flag                                     | Description                                                             |
 |-----------------------------------------|-------------------------------------------------------------------------|
 | `--lint`                                | Lints the markdown files.                                               |
 | `--spell-check`                         | Enables spell checking on the markdown files. Only supports English.    |
 | `--add-table-of-contents`               | A table of contents will be inserted as the first slide.                |
 | `--correct-markdown-list-numbering`     | Makes sure that numbers are in chronological order. Also works for nested lists. |
-| `--convert-to-pdf`                      | Output a pdf (will not have any formatting).                            |
-
 
 
 # Server
