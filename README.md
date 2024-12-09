@@ -72,9 +72,9 @@ All flags are optional. The default behavior is that it compiles markdown files 
 | `--output-md`                           | `Output to a single md file titled 'presentation.md'.                   |
 | `--convert-to-pdf`                      | Output a pdf (will not have any formatting).                            |
 
-Use <div class='ignore-output-md'>...</div> to exclude the enclosed content from the markdown output. This content, however, will still be visible in the presentation.
+Use `<div class='ignore-output-md'>...</div>` to exclude the enclosed content from the markdown output. This content, however, will still be visible in the presentation.
 
-Use <div class='ignore-presentation'>...</div> to exclude the enclosed content from the presentation. 
+Use `<div class='ignore-presentation'>...</div>` to exclude the enclosed content from the presentation. 
 
 **Other Options**
 
