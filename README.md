@@ -9,15 +9,19 @@
 
 https://www.npmjs.com/package/remarkableslides
 
-A CLI tool that automates the process of building and serving [remark.js](https://github.com/remarkjs/remark) slide presentations from markdown files. 
+A CLI tool that automates the process of building and serving [remark.js](https://github.com/remarkjs/remark) slide presentations from markdown files.
 
-## Features:
+---
+
+## Features
 
 * Build markdown files into a HTML document for presentation
 * Create a server that serves the presentations
 * Can watch for changes in markdown and rebuild only what is needed
 * Markdown linting
 * Spell-checking
+
+---
 
 ## How to run
 
@@ -38,6 +42,8 @@ Now you can run it like this:
 ```bash
 $ remarkableslides
 ```
+
+---
 
 ## Flags
 
@@ -80,12 +86,9 @@ Use <div class='ignore-presentation'>...</div> to exclude the enclosed content f
 | `--correct-markdown-list-numbering`     | Makes sure that numbers are in chronological order. Also works for nested lists. |
 
 
-## Additional Info
+---
 
-If a CSS file titled `presentation.css` is present in the directory, it will be automatically included in the presentation.
-
-
-# Server
+## Server
 
 By default, a server starts on port 1234 and serves all created presentation files.
 
@@ -148,16 +151,17 @@ Basically the above will render as:
 
 ```
 
-2. Now run the `remarkableslides` command in the directory and notice how it creates `presentation.html`. 
-
-3. Try to run the server (it will watch for changes, rebuild and reload the page automatically):
+3. Now run the `remarkableslides` command in the directory and notice how it creates `presentation.html`. 
 
 ```bash
 $ remarkableslides
 ```
 
-And checkout `localhost:1234`. That's all!
+The server will watch for changes, rebuild and reload the page automatically.
 
+4. Check out `localhost:1234`. That's all!
+
+---
 
 ### CSS styles for the presentation
 
@@ -165,6 +169,8 @@ Create a CSS file titled `presentation.css` in the same place as your markdown f
 
 I have added some styles that make sense for me. You can always modify them directly in the `presentation.html` file. 
 
+
+---
 
 ## Design choices
 
@@ -178,6 +184,7 @@ Ignored folders: `node_modules`.
 
 Ignored files: `README.md`.
 
+---
 
 ## Issues
 
