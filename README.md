@@ -45,6 +45,81 @@ $ remarkableslides
 
 ---
 
+## Try it in less than 1 minute!
+
+1. Create an md file with any name and add the following content to it:
+
+```md
+
+<div class="title-card">
+    <h1>Try Remarkable Slides now!</h1>
+</div>
+
+---
+
+# Slide Title
+
+Some text.
+
+* Both bullet points
+* And numbered lists 
+ 1. Are
+ 2. Supported
+
+---
+
+# Slide 2 Title
+
+`---` is used to denote the next slide. 
+
+---
+
+<div style="color: cyan; font-size: 20px; text-shadow: 2px 2px 4px #aaa;">
+  You can also embed HTML into your markdown
+</div>
+
+---
+
+# Image slide
+
+<img src="https://github.com/anderslatif/remarkableslides/blob/main/remarkableslides_logo.png" alt="Remarkable Slides Logo"/>
+
+<!-- You can point to local files as well -->
+<!-- The above will also work in markdown on Github -->
+
+---
+
+# Pros and cons lists
+
+* (+) Pro 1
+* (+) Pro 2
+* (-) Con 1
+* (-) Con 2
+* (!) Note!
+
+<!-- The above will still render in markdown but in the HTML presentation 
+'* (+/-/!)' becomes a bulleted list with the sign in paranthesis as the bullet point.
+Basically the above will render as:
+
+<ul style="list-style-type: '+ '"><li>Pro 1</li><li>Pro 2</li></ul>
+<ul style="list-style-type: '- '"><li>Con 1</li><li>Con 2</li></ul>
+<ul style="list-style-type: '! '"><li>Note!</li></ul>
+ -->
+
+```
+
+2. Now run the `remarkableslides` command in the directory and notice how it creates `presentation.html`. 
+
+```bash
+$ npx remarkableslides
+```
+
+3. Check out [localhost:1234](http://localhost:1234). That's all!
+
+4. The server will watch for changes. Change something and it will reload the page automatically.
+
+---
+
 ## Flags
 
 All flags are optional. The default behavior is that it compiles markdown files into presentations. Markdown linting and spell checks are disabled by default. The server that runs the presentations are also disabled by default. 
@@ -94,72 +169,9 @@ By default, a server starts on port 1234 and serves all created presentation fil
 
 Endpoint names are derived from markdown file names. For directories containing multiple markdown files, endpoint names are combinations of those file names. If uniqueness is not achieved, folder names are incorporated into the endpoint name to ensure it is unique.
 
-To get an overview of endpints just visit `localhost:1234/`.
+To get an overview of endpints just visit [localhost:1234](http://localhost:1234).
 
 Use the `--live-port` flag to specify a different port. 
-
-
-## Try it out: Create your first slide presentation
-
-1. Create an md file of any name and add the following content to it:
-
-```md
-# Slide Title
-
-Some text.
-
-* Both bullet points
-* And numbered lists 
- 1. Are
- 2. Supported
-
----
-
-# Slide 2 Title
-
-`---` is used to denote the next slide. 
-
-<div style="color: cyan; font-size: 20px; text-shadow: 2px 2px 4px #aaa;">
-  You can also embed HTML into your markdown
-</div>
-
----
-
-# Image slide
-
-<img src="./remarkableslides_logo" alt="Remarkable Slides Logo"/>
-
-<!-- The above will also work in markdown on Github -->
----
-
-# Pros and cons lists
-
-* (+) Pro 1
-* (+) Pro 2
-* (-) Con 1
-* (-) Con 2
-* (!) Note!
-
-<!-- The above will still render in markdown but in the HTML presentation 
-'* (+/-/!)' becomes a bulleted list with the sign in paranthesis as the bullet point.
-Basically the above will render as:
-
-<ul style="list-style-type: '+ '"><li>Pro 1</li><li>Pro 2</li></ul>
-<ul style="list-style-type: '- '"><li>Con 1</li><li>Con 2</li></ul>
-<ul style="list-style-type: '! '"><li>Note!</li></ul>
- -->
-
-```
-
-3. Now run the `remarkableslides` command in the directory and notice how it creates `presentation.html`. 
-
-```bash
-$ remarkableslides
-```
-
-The server will watch for changes, rebuild and reload the page automatically.
-
-4. Check out `localhost:1234`. That's all!
 
 ---
 
@@ -181,8 +193,6 @@ When serving a presentation the folder and its subfolders are served as static c
 If there are multiple markdown files in a directory, they will read them by alphabetic order and assembled into a single presentation.
 
 Ignored folders: `node_modules`. 
-
-Ignored files: `README.md`.
 
 ---
 
