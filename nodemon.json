@@ -1,5 +1,5 @@
 {
     "quiet": true,
     "watch": ["./"],
-    "ext": "js, md"
+    "ext": "js, md, css"
 }

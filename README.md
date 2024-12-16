@@ -3,19 +3,101 @@
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
 
-> Make slides from markdown files using [remark.js](https://github.com/remarkjs/remark).
+> A CLI tool that makes it feel good to create slides from markdown files.
 
 <img src="https://github.com/anderslatif/remarkableslides/blob/main/remarkableslides_logo.png" alt="remarkableslides logo" width="150"/>
 
-https://www.npmjs.com/package/remarkableslides
-
-A CLI tool that automates the process of building and serving [remark.js](https://github.com/remarkjs/remark) slide presentations from markdown files.
+Make slides from markdown files using [remark.js](https://github.com/remarkjs/remark).
 
 ---
 
 ## Features
 
-* Build markdown files into a HTML document for presentation
+* Build markdown files into HTML documents for presentations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Create a server that serves the presentations
 * Can watch for changes in markdown and rebuild only what is needed
 * Markdown linting
@@ -175,12 +257,32 @@ Use the `--live-port` flag to specify a different port.
 
 ---
 
-### CSS styles for the presentation
+### CSS Themes
 
-Create a CSS file titled `presentation.css` in the same place as your markdown file(s) to include a custom style, otherwise it will get a default template. 
+Here is how to change the CSS theme for the presentation:
 
-I have added some styles that make sense for me. You can always modify them directly in the `presentation.html` file. 
+#### 1. Custom Way:
 
+You can always modify them directly in the `presentation.html` file. 
+
+You can also create a a CSS file in the same place as your markdown file(s) to include a custom style, otherwise it will use the default template. 
+
+
+#### 2. Command Line Way:
+
+You can choose a theme with the `--theme` flag. 
+
+```bash
+$ npx remarkableslides --theme=default
+```
+
+The current support for CSS themes are:
+
+| CSS Theme |
+|-----------|
+| Default   |
+
+If you would like to have your reasonable personal theme included in the library then make a PR with the CSS file in the [./lib/presentationUtil/css](./lib/presentationUtil/css).
 
 ---
 
