@@ -14,90 +14,6 @@ Make slides from markdown files using [remark.js](https://github.com/remarkjs/re
 ## Features
 
 * Build markdown files into HTML documents for presentations
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * Create a server that serves the presentations
 * Can watch for changes in markdown and rebuild only what is needed
 * Markdown linting
@@ -107,7 +23,7 @@ Make slides from markdown files using [remark.js](https://github.com/remarkjs/re
 
 ## How to run
 
-Run the following and it will look recursively for .md files starting from the directory you are in.
+Run the following and it will recursively look for `.md` files starting from the directory you are in.
 
 ```bash
 $ npx remarkableslides
@@ -152,7 +68,11 @@ Some text.
 
 # Slide 2 Title
 
-`---` is used to denote the next slide. 
+`---` is used to denote the next slide.
+
+> This is a quote
+
+Bold text is **highlighted**.
 
 ---
 
