@@ -5,7 +5,7 @@
 
 > A CLI tool that makes it feel good to create slides from markdown files.
 
-<img src="https://github.com/anderslatif/remarkableslides/blob/main/remarkableslides_logo.png" alt="remarkableslides logo" width="150"/>
+<img src="https://github.com/anderslatif/remarkableslides/blob/main/assets/remarkableslides_logo.png" alt="remarkableslides logo" width="150"/>
 
 Make slides from markdown files using [remark.js](https://github.com/remarkjs/remark).
 
@@ -84,7 +84,7 @@ Some text.
 
 # Image slide
 
-<img src="https://github.com/anderslatif/remarkableslides/blob/main/remarkableslides_logo.png" alt="Remarkable Slides Logo"/>
+<img src="https://github.com/anderslatif/remarkableslides/blob/main/assets/remarkableslides_logo.png" alt="Remarkable Slides Logo"/>
 
 <!-- You can point to local files as well -->
 <!-- The above will also work in markdown on Github -->
@@ -189,14 +189,25 @@ Use the `--live-port` flag to specify a different port.
 
 Here is how to change the CSS theme for the presentation:
 
-#### 1. Custom Way:
+#### 1. Modify the Presentation directly
 
-You can always modify them directly in the `presentation.html` file. 
+Edit the `<style>` tag in the `presentation.html` file.
 
-You can also create a a CSS file in the same place as your markdown file(s) to include a custom style, otherwise it will use the default template. 
+(Will not work with live reload).
 
+#### 2. Create (a) CSS file(s)
 
-#### 2. Command Line Way:
+Add CSS files in the same directory as the markdown files.
+
+#### 3. Point to the CSS file
+
+When invoking the command use the `--css` flag:
+
+```bash
+$ npx remarkableslides --css ../../link/to/your/css_file.css
+```
+
+#### 4. Use a ready-made theme
 
 You can choose a theme with the `--theme` flag. 
 
@@ -208,9 +219,11 @@ The current support for CSS themes are:
 
 | CSS Theme |
 |-----------|
-| Default   |
+| default   |
 
-If you would like to have your reasonable personal theme included in the library then make a PR with the CSS file in the [./lib/presentationUtil/css](./lib/presentationUtil/css).
+The theme name corresponds to the file names in this [./lib/presentationUtil/css](./lib/presentationUtil/css) directory without the `.css` extension. 
+
+If you would like to have your reasonable personal theme included in the library then make a PR with the CSS file to that folder.
 
 ---
 
@@ -222,7 +235,9 @@ When serving a presentation the folder and its subfolders are served as static c
 
 If there are multiple markdown files in a directory, they will read them by alphabetic order and assembled into a single presentation.
 
-Ignored folders: `node_modules`. 
+Ignored folders: `node_modules`.
+
+Ignored files: `README.md`, `CONTRIBUTING.md`, `CHANGELOG.md`.
 
 ---
 
