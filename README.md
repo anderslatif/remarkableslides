@@ -159,11 +159,19 @@ All flags are optional. The default behavior is that it compiles markdown files 
 
 Use `<div class='ignore-output-md'>...</div>` to exclude the enclosed content from the markdown output. This content, however, will still be visible in the presentation.
 
-Use `<div class='ignore-presentation'>...</div>` to exclude the enclosed content from the presentation. 
+Use `<div class='ignore-presentation'>...</div>` to exclude the enclosed content from the presentation.
+
+**CSS Options**
+
+| Flag              | Description                                     |
+|-------------------|-------------------------------------------------|
+| `--theme <type>`  | Specify a pre-made theme for the presentation.  |
+| `--css <path>`    | Specify a CSS file to use for the presentation. |
+
 
 **Other Options**
 
-| Flag                                     | Description                                                             |
+| Flag                                    | Description                                                             |
 |-----------------------------------------|-------------------------------------------------------------------------|
 | `--lint`                                | Lints the markdown files.                                               |
 | `--spell-check`                         | Enables spell checking on the markdown files. Only supports English.    |
