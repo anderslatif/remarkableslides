@@ -72,7 +72,7 @@ Some text.
 
 > This is a quote
 
-Bold text is **highlighted**.
+**Bold** text is and *italic*.
 
 ---
 
@@ -88,6 +88,14 @@ Bold text is **highlighted**.
 
 <!-- You can point to local files as well -->
 <!-- The above will also work in markdown on Github -->
+
+---
+
+# Example of a video slide
+
+## What is DevOps?
+
+[![What is DevOps?](http://img.youtube.com/vi/kBV8gPVZNEE/0.jpg)](https://www.youtube.com/watch?v=kBV8gPVZNEE)
 
 ---
 
