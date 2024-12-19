@@ -50,6 +50,14 @@ body {
     font-size: 1.2em;
 }
 
+/* Nested Lists */
+.remark-slide-content ul ul,
+.remark-slide-content ol ol,
+.remark-slide-content ul ol,
+.remark-slide-content ol ul {
+    font-size: 1em;
+}
+
 /* Images */
 .remark-slide-content img {
     max-width: 100%;
@@ -134,4 +142,19 @@ tbody tr:nth-child(even) {
 
 .con-bullet-item {
     color: rgb(215, 15, 15);
+}
+
+blockquote {
+    border-left: 4px solid #007BFF;
+    padding-left: 16px;
+    font-style: italic;
+    margin: 16px 0;
+}
+  
+strong {
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+    background-color: grey;
+    padding: 2px 4px;
+    border-radius: 4px;
 }

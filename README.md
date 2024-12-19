@@ -1,7 +1,6 @@
 # remarkableslides
 
 [![NPM Version][npm-version-image]][npm-url]
-[![NPM Install Size][npm-install-size-image]][npm-install-size-url]
 
 > A CLI tool that makes it feel good to create slides from markdown files.
 
@@ -61,20 +60,14 @@ Some text.
 
 * Both bullet points
 * And numbered lists 
- 1. Are
- 2. Supported
-
----
-
-# Slide 2 Title
+ 1. Are Supported
+ 2. And can be nested
 
 `---` is used to denote the next slide.
 
 > This is a quote
 
-**Bold** text is and *italic*.
-
----
+**Bold** text and *italic*.
 
 <div style="color: cyan; font-size: 20px; text-shadow: 2px 2px 4px #aaa;">
   You can also embed HTML into your markdown
@@ -84,10 +77,12 @@ Some text.
 
 # Image slide
 
-<img src="https://github.com/anderslatif/remarkableslides/blob/main/assets/remarkableslides_logo.png" alt="Remarkable Slides Logo"/>
+<img  src="https://raw.githubusercontent.com/anderslatif/remarkableslides/main/assets/remarkableslides_logo.png" 
+      alt="Remarkable Slides Logo"
+      style="height: 40vh;"/>
 
 <!-- You can point to local files as well -->
-<!-- The above will also work in markdown on Github -->
+<!-- The above will also be shown on Github -->
 
 ---
 
@@ -96,6 +91,40 @@ Some text.
 ## What is DevOps?
 
 [![What is DevOps?](http://img.youtube.com/vi/kBV8gPVZNEE/0.jpg)](https://www.youtube.com/watch?v=kBV8gPVZNEE)
+
+---
+
+# Code slide
+
+Javascript:
+
+```javascript
+import path from 'path';
+
+console.log('Remember to install Nodemon globally if it cannot find the executable');
+```
+
+Python:
+
+```python
+print("The command is: 'npm install -g nodemon'")
+```
+
+Terminal:
+
+```bash
+echo "This is a terminal command"
+```
+
+---
+
+# Table slide
+
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Row 1    | Row 1    | Row 1    |
+| Row 2    | Row 2    | Row 2    |
+| Row 3    | Row 3    | Row 3    |
 
 ---
 
@@ -127,6 +156,11 @@ $ npx remarkableslides
 3. Check out [localhost:1234](http://localhost:1234). That's all!
 
 4. The server will watch for changes. Change something and it will reload the page automatically.
+
+The result should look like this:
+
+<img src="https://github.com/anderslatif/remarkableslides/blob/main/assets/slide_example.png" alt="remarkableslides logo" width="700"/>
+
 
 ---
 
@@ -220,7 +254,7 @@ $ npx remarkableslides --css ../../link/to/your/css_file.css
 You can choose a theme with the `--theme` flag. 
 
 ```bash
-$ npx remarkableslides --theme=default
+$ npx remarkableslides --theme default
 ```
 
 The current support for CSS themes are:
@@ -229,7 +263,7 @@ The current support for CSS themes are:
 |-----------|
 | default   |
 
-The theme name corresponds to the file names in this [./lib/presentationUtil/css](./lib/presentationUtil/css) directory without the `.css` extension. 
+The theme name corresponds to the file names in the [./lib/presentationUtil/css](https://github.com/anderslatif/remarkableslides/tree/main/lib/presentationUtil/css) directory without the `.css` extension. 
 
 If you would like to have your reasonable personal theme included in the library then make a PR with the CSS file to that folder.
 
@@ -256,5 +290,4 @@ Feel free to create an [issue](https://github.com/anderslatif/remarkableslides/i
 
 [npm-version-image]: https://img.shields.io/npm/v/remarkableslides.svg
 [npm-url]: https://www.npmjs.com/package/remarkableslides
-[npm-install-size-image]: https://packagephobia.com/badge?p=remarkableslides
-[npm-install-size-url]: https://packagephobia.com/result?p=remarkableslides
+
