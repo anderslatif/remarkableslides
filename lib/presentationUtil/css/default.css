@@ -71,15 +71,6 @@ a:link, a:visited {
     color: green;
 }
 
-/* Code */
-.remark-slide-content pre {
-    background: #333; /* Dark background for code blocks */
-    border: 1px solid #444;
-    color: #eee; /* Light text for code */
-    padding: 8px;
-    overflow: auto;
-}
-
 .remark-slide-content code {
     font-family: 'Courier New', Courier, monospace;
     background-color: #333;
