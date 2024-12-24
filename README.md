@@ -48,10 +48,6 @@ $ remarkableslides
 
 1. Create an md file with any name and add the following content to it:
 
-## Try it in less than 1 minute!
-
-1. Create an md file with any name and add the following content to it:
-
 ```md
 <div class="title-card">
     <h1>Try Remarkable Slides now!</h1>
@@ -101,7 +97,9 @@ Some text.
 
 # Code slide
 
-There is support for multiple languages. Just specify the language after the three backticks.
+There is support for syntax highlighting of multiple languages. 
+
+Just specify the language after the three backticks.
 
 ---
 
