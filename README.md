@@ -4,7 +4,7 @@
 
 > A CLI tool that makes it feel good to create slides from markdown files.
 
-<img src="https://github.com/anderslatif/remarkableslides/blob/main/assets/remarkableslides_logo.png" alt="remarkableslides logo" width="150"/>
+<img src="https://github.com/anderslatif/remarkableslides/raw/main/assets/remarkableslides_logo.png" alt="remarkableslides logo" width="150"/>
 
 Make slides from markdown files using [remark.js](https://github.com/remarkjs/remark).
 
@@ -14,7 +14,9 @@ Make slides from markdown files using [remark.js](https://github.com/remarkjs/re
 
 * Build markdown files into HTML documents for presentations
 * Create a server that serves the presentations
-* Can watch for changes in markdown and rebuild only what is needed
+* Watches for changes in the markdown and rebuilds only what is needed
+* Create multiple presentations recursively
+* Combine multiple markdown files in the same folder into a single presentation
 * Markdown linting
 * Spell-checking
 
@@ -46,8 +48,11 @@ $ remarkableslides
 
 1. Create an md file with any name and add the following content to it:
 
-```md
+## Try it in less than 1 minute!
 
+1. Create an md file with any name and add the following content to it:
+
+```md
 <div class="title-card">
     <h1>Try Remarkable Slides now!</h1>
 </div>
@@ -82,7 +87,7 @@ Some text.
       style="height: 40vh;"/>
 
 <!-- You can point to local files as well -->
-<!-- The above will also be shown on Github -->
+<!-- Use img tags to make the images appear on GitHub as well -->
 
 ---
 
@@ -96,25 +101,7 @@ Some text.
 
 # Code slide
 
-Javascript:
-
-```javascript
-import path from 'path';
-
-console.log('Remember to install Nodemon globally if it cannot find the executable');
-```
-
-Python:
-
-```python
-print("The command is: 'npm install -g nodemon'")
-```
-
-Terminal:
-
-```bash
-echo "This is a terminal command"
-```
+There is support for multiple languages. Just specify the language after the three backticks.
 
 ---
 
@@ -159,8 +146,9 @@ $ npx remarkableslides
 
 The result should look like this:
 
-<img src="https://github.com/anderslatif/remarkableslides/blob/main/assets/slide_example.png" alt="remarkableslides logo" width="700"/>
+<img src="https://github.com/anderslatif/remarkableslides/raw/main/assets/slide_example.png" alt="remarkableslides logo" width="700"/>
 
+Press `F` for full-screen. 
 
 ---
 
@@ -256,6 +244,10 @@ You can choose a theme with the `--theme` flag.
 ```bash
 $ npx remarkableslides --theme default
 ```
+
+> The behavior is that the CSS theme is set to `default` if no theme is specified. If a CSS file is found then it will be used instead. 
+>
+> It's possible to mix your own CSS file with a theme by adding the `--theme` flag.
 
 The current support for CSS themes are:
 
