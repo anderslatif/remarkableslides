@@ -146,13 +146,17 @@ The result should look like this:
 
 <img src="https://github.com/anderslatif/remarkableslides/raw/main/assets/slide_example.png" alt="remarkableslides logo" width="700"/>
 
-Press `F` for full-screen. 
-
 ---
 
 ## Flags
 
 All flags are optional. The default behavior is that it compiles markdown files into presentations. Markdown linting and spell checks are disabled by default. The server that runs the presentations are also disabled by default. 
+
+You can always run:
+
+```bash
+$ npx remarkableslides --help
+```
 
 
 **Modes**
@@ -198,6 +202,16 @@ Use `<div class='ignore-presentation'>...</div>` to exclude the enclosed content
 | `--add-table-of-contents`               | A table of contents will be inserted as the first slide.                |
 | `--correct-markdown-list-numbering`     | Makes sure that numbers are in chronological order. Also works for nested lists. |
 
+
+---
+
+# Presentation modes
+
+Press `F` for full-screen. 
+
+Press `C` to clone the window.
+
+Press `P` to see the presenter view. Everything in each slide written after `???` will be considered a presenter note.
 
 ---
 
