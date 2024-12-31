@@ -205,7 +205,7 @@ Use `<div class='ignore-presentation'>...</div>` to exclude the enclosed content
 
 ---
 
-# Presentation modes
+## Presentation modes
 
 Press `F` for full-screen. 
 
@@ -227,7 +227,7 @@ Use the `--live-port` flag to specify a different port.
 
 ---
 
-### CSS Themes
+## CSS Themes
 
 Here is how to change the CSS theme for the presentation:
 
