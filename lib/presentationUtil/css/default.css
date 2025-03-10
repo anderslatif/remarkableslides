@@ -68,7 +68,10 @@ body {
 
 /* Links */
 a:link, a:visited {
-    color: green;
+	color: #00f;
+	background-color: #8e8c8c20;
+	padding: 2px 5px;
+	border-radius: 5px;
 }
 
 .remark-slide-content code {

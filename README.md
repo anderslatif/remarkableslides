@@ -229,7 +229,7 @@ Use the `--live-port` flag to specify a different port.
 
 ## CSS Themes
 
-Here is how to change the CSS theme for the presentation:
+Here are all the different ways to change the CSS theme for the presentation:
 
 #### 1. Modify the Presentation directly
 
