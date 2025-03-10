@@ -1,6 +1,6 @@
 {
   "name": "remarkableslides",
-  "version": "0.0.84",
+  "version": "0.0.85",
   "description": "Build Markdown files into slides using remark.js",
   "type": "module",
   "bin": {
