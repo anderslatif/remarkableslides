@@ -68,7 +68,7 @@ body {
 
 /* Links */
 a:link, a:visited {
-	color: #00f;
+	color: rgb(71, 176, 208);
 	background-color: #8e8c8c20;
 	padding: 2px 5px;
 	border-radius: 5px;
